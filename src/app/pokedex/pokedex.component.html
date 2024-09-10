@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="pokedex-console">
+      <app-pokemon-detail [selectedPokemon]="selectedPokemon"></app-pokemon-detail>
+    </div>
+    <div class="pokemon-list">
+      <app-pokemon-list (pokemonSelected)="onPokemonSelected($event)"></app-pokemon-list>
+    </div>
+  </div>
+  

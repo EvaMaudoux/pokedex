@@ -1,0 +1,12 @@
+<div *ngIf="!selectedPokemon">
+    <img [src]="defaultImage" alt="Sacha le dresseur" />
+  </div>
+  
+  <div *ngIf="pokemonDetails">
+    <img [src]="pokemonDetails.sprites.front_default" alt="{{ pokemonDetails.name }}" />
+    <h3>{{ pokemonDetails.name }}</h3>
+    <p>Type : {{ pokemonDetails.types[0].type.name }}</p>
+    <p>Numéro de génération : {{ pokemonDetails.id }}</p>
+    <p>Description : {{ pokemonDetails.description || 'Aucune description disponible.' }}</p>
+  </div>
+  
